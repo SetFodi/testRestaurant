@@ -38,24 +38,25 @@ export default function Home() {
             return (
               <Link key={category} href={`/category/${category}`} legacyBehavior>
                 <a className="group relative block overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="relative aspect-square">
-                    <img
-                      src={firstMeal.image}
-                      alt={formatCategory(category)}
-                      className="w-full h-full object-cover transform transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-105"
-                    />
-                    {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/50 transition-opacity duration-500 group-hover:via-black/40 group-hover:to-black/60" />
-                    {/* Category Title */}
-                    <div className="absolute inset-0 flex items-end p-6">
-                      <h2 className="text-2xl md:text-3xl font-serif text-white tracking-tight transition-transform duration-500 translate-y-0 group-hover:-translate-y-2">
-                        <span className="bg-gradient-to-r from-amber-400/90 to-amber-500/90 bg-clip-text text-transparent">
-                          {formatCategory(category)}
-                        </span>
-                        <span className="block mt-2 w-12 h-0.5 bg-amber-400 transition-all duration-500 group-hover:w-16" />
-                      </h2>
-                    </div>
-                  </div>
+                <div className="relative h-60 md:aspect-square md:h-auto">
+  <img
+    src={firstMeal.image}
+    alt={formatCategory(category)}
+    className="w-full h-full object-cover transform transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-105"
+  />
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/50 transition-opacity duration-500 group-hover:via-black/40 group-hover:to-black/60" />
+  {/* Category Title */}
+  <div className="absolute inset-0 flex items-end p-6">
+    <h2 className="text-2xl md:text-3xl font-serif text-white tracking-tight transition-transform duration-500 translate-y-0 group-hover:-translate-y-2">
+      <span className="bg-gradient-to-r from-amber-400/90 to-amber-500/90 bg-clip-text text-transparent">
+        {formatCategory(category)}
+      </span>
+      <span className="block mt-2 w-12 h-0.5 bg-amber-400 transition-all duration-500 group-hover:w-16" />
+    </h2>
+  </div>
+</div>
+
                 </a>
               </Link>
             );
