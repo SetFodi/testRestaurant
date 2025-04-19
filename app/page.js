@@ -148,7 +148,7 @@ export default function Home() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            Culinary Artistry
+            Culinary Artistry V2.0
           </motion.h1>
           
           <motion.div
